@@ -34,6 +34,9 @@ function drawPyramid(height) {
 }
   */
 
+function updatePyramid(){
+printPyramid(parseInt(document.forms.pyramid.height.value))
+}
 
 
 
@@ -46,6 +49,7 @@ str = str.concat("\u00A0");
 };
 str = str.concat('##');
 var pyramid = document.getElementById('pyramid');
+pyramid.innerHTML='';
 for (let i = 0; i < height; i++) {
        let line = document.createElement('p');
        line.innerHTML += str;
@@ -53,8 +57,8 @@ for (let i = 0; i < height; i++) {
    //    console.log(str);
        str = str.substring(0,height - 2 - i) + '#' + str.substring(height - i - 1);
 }
-let dl = document.getElementById('construction');
-pyramid.removeChild(dl);
+/*let dl = document.getElementById('construction');
+pyramid.removeChild(dl);  */
 
     // TODO
     // print that pyramid!
