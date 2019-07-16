@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-      #pyramid {
-        font-family: "Courier New", monospace;
-        line-height: 0;
-      }
-    </style>
-  </head>
-
-<body>
-
-<h1>Pyramid Slide</h1>
-<form name="pyramid"
-oninput="heightOutput.value=parseInt(height.value);printPyramid(parseInt(height.value), brickSymbol.value)">
-  Brick Symbol:
-<select name = "brickSymbol" id = "brickSymbol">
-           <option value="#">#</option>
-           <option value="@">@</option>
-           <option value="X">X</option>
-           <option value="$">$</option>
-</select>
-
-How high?
-  <input type="range" id="height" name="height" min="1" max="20">
-  <output name="heightOutput" for="height"></output>
-</form>
-
-<div font-family = "Courier New", monospace;>
-        <div id="pyramid">
-       </div>
-    <script src="mario.js"></script>    
-</div>
-<script>document.forms.pyramid.oninput()</script>
-</body>
+    <head>
+        <style>
+            #pyramid {
+                font-family: "Courier New", monospace;
+                line-height: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pyramid Slide</h1>
+        <form name="pyramid" oninput="heightOutput.value=parseInt(height.value);printPyramid(parseInt(height.value), brickSymbol.value)">
+            Brick Symbol:
+            <select name="brickSymbol" id="brickSymbol">
+                <option value="#">#</option>
+                <option value="@">@</option>
+                <option value="X">X</option>
+                <option value="$">$</option>
+            </select>
+            How high?
+            <input type="range" id="height" name="height" min="1" max="20">
+            <output name="heightOutput" for="height"></output>
+        </form>
+        <div font-family="Courier New" , monospace;>
+            <div id="pyramid"></div>
+            <script src="mario.js"></script>
+        </div>
+        <script>
+            document.forms.pyramid.oninput()
+        </script>
+    </body>
 </html>
