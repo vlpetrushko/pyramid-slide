@@ -12,19 +12,19 @@
 <body>
 
 <h1>Pyramid Slide</h1>
-<form action=""
-oninput="x.value=parseInt(a.value)">
+<form name="pyramid"
+oninput="heightOutput.value=parseInt(height.value)">
   Brick Symbol:
 <select name = "brickSymbol" id = "brickSymbol">
-         <option value="#">#</option>
          <option value="@">@</option>
+         <option value="#">#</option>
          <option value="X">X</option>
          <option value="$">$</option>
 </select>
 
 How high?
-  <input type="range" id="a" name="a" min="0" max="20">
-  <output name="x" for="a"></output>
+  <input type="range" id="height" name="height" min="0" max="20">
+  <output name="heightOutput" for="height"></output>
 </form>
 
 <div font-family = "Courier New", monospace;>
