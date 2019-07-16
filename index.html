@@ -13,13 +13,13 @@
 
 <h1>Pyramid Slide</h1>
 <form name="pyramid"
-oninput="heightOutput.value=parseInt(height.value);updatePyramid()">
+oninput="heightOutput.value=parseInt(height.value);printPyramid(parseInt(height.value), brickSymbol.value)">
   Brick Symbol:
 <select name = "brickSymbol" id = "brickSymbol">
-         <option value="@">@</option>
-         <option value="#">#</option>
-         <option value="X">X</option>
-         <option value="$">$</option>
+           <option value="#">#</option>
+           <option value="@">@</option>
+           <option value="X">X</option>
+           <option value="$">$</option>
 </select>
 
 How high?
@@ -29,14 +29,9 @@ How high?
 
 <div font-family = "Courier New", monospace;>
         <div id="pyramid">
-      <!-- Our pyramid will go inside here -->
-      <div id="construction">
-        <p>Uh oh! the pyramid is still under construction.</p>
-        <p>Check back again soon... our developers are hard at wrk as we speak!</p>
-      </div>
-     </div>
+       </div>
     <script src="mario.js"></script>    
 </div>
-
+<script>document.forms.pyramid.oninput()</script>
 </body>
 </html>

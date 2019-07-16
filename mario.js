@@ -1,5 +1,5 @@
 
-printPyramid(8);
+//printPyramid(8);
 //drawPyramid(8);
 
 /*
@@ -34,20 +34,16 @@ function drawPyramid(height) {
 }
   */
 
-function updatePyramid(){
-printPyramid(parseInt(document.forms.pyramid.height.value))
-}
 
 
-
-function printPyramid(height) {
+function printPyramid(height, filler) {
 //  console.log("Uh oh... the pyramid is under construction.");
 //    console.log("Check back soon, our developers are hard at work as we speak!");
 let str = '';
 for (let i = 0; i < height - 1; i++) {
 str = str.concat("\u00A0");
 };
-str = str.concat('##');
+str = str.concat(filler+filler);
 var pyramid = document.getElementById('pyramid');
 pyramid.innerHTML='';
 for (let i = 0; i < height; i++) {
@@ -55,7 +51,7 @@ for (let i = 0; i < height; i++) {
        line.innerHTML += str;
        pyramid.appendChild(line);
    //    console.log(str);
-       str = str.substring(0,height - 2 - i) + '#' + str.substring(height - i - 1);
+       str = str.substring(0,height - 2 - i) + filler + str.substring(height - i - 1);
 }
 /*let dl = document.getElementById('construction');
 pyramid.removeChild(dl);  */
