@@ -3,31 +3,76 @@
     <head>
         <style>
             #pyramid {
+                color: purple;
                 font-family: "Courier New", monospace;
                 line-height: 0;
+                padding: 2em;
             }
+
+            h1 {
+                background-color: #ba63ba;
+                width: 80%;
+                height: 3em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #mainPage {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: solid 2px purple;
+                border-radius: 4px;
+            }
+
+            form {
+                background-color: lightgray;
+                padding: 1em 4em;
+                display: flex;
+                align-items: center;
+            }
+
+            .control {
+                display: flex;
+                align-items: center;
+                margin: 0 1em;
+            }
+
         </style>
     </head>
     <body>
         <h1>Pyramid Slide</h1>
-        <form name="pyramidSettings" oninput="heightOutput.value=parseInt(height.value);printPyramid(parseInt(height.value), brickSymbol.value, pyramid)">
-            Brick Symbol:
-            <select name="brickSymbol" id="brickSymbol">
-                <option value="#">#</option>
-                <option value="@">@</option>
-                <option value="X">X</option>
-                <option value="$">$</option>
-            </select>
-            How high?
-            <input type="range" id="height" name="height" min="1" max="20">
-            <output name="heightOutput" for="height"></output>
-        </form>
-        <div font-family="Courier New" , monospace;>
-            <div id="pyramid"></div>
-            <script src="mario.js"></script>
+        <div id='mainPage'>
+            <form name="pyramidSettings" oninput="heightOutput.value=parseInt(height.value);printPyramid(parseInt(height.value), brickSymbol.value, pyramid)">
+                <div class=control>
+                    <span>Brick Symbol:</span>
+                    <select name="brickSymbol" id="brickSymbol">
+                        <option value="#">#</option>
+                        <option value="@">@</option>
+                        <option value="X">X</option>
+                        <option value="$">$</option>
+                    </select>
+                </div>
+                <div class=control>
+                    <span>How high?</span>
+                    <input type="range" id="height" name="height" min="1" max="20">
+                    <output name="heightOutput" for="height"></output>
+                </div>
+            </form>
+            <div font-family="Courier New" , monospace;>
+                <div id="pyramid"></div>
+                <script src="mario.js"></script>
+            </div>
+            <script>
+                document.forms.pyramidSettings.oninput()
+            </script>
         </div>
-        <script>
-            document.forms.pyramidSettings.oninput()
-        </script>
     </body>
 </html>
