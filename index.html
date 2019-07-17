@@ -6,7 +6,7 @@
     <body>
         <h1>Pyramid Slide</h1>
         <div id='mainPage'>
-            <form name="pyramidSettings" oninput="heightOutput.value=parseInt(height.value);printPyramid(parseInt(height.value), brickSymbol.value, pyramid)">
+            <form name="pyramidSettings" oninput="heightOutput.value=parseInt(height.value); printPyramid(pyramid, parseInt(height.value), brickSymbol.value)">
                 <div class=control>
                     <span>Brick Symbol:</span>
                     <select name="brickSymbol" id="brickSymbol">
